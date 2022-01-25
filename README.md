@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# CRA를 기반으로 eslint, prettier, husky & lint-staged가 설정된 보일러플레이트입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Style Guide
 
-## Available Scripts
+### ESLint
+Airbnb의 자바스크립트 스타일 가이드를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용
 
-In the project directory, you can run:
+### ES2015+
+권장되는 최소 자바스크립트 버전은 ES6(ECMAScript 2015)이다. 하위 호환이 필요한 경우에는 Babel 트랜스파일러를 통하여 지원하되, 가능한 최신(latest) 문법을 활용할 것.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### WebStorm 설정
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ESLint 설정하기
 
-### `yarn test`
+Languages & Frameworks > Javascript > Code Quality Tools > ESLint 선택
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ESLint 패키지 위치 지정 ( Automatic EsLint configuration ) or 수동 설정
 
-### `yarn build`
+Prettier 설정하기
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Languages & Frameworks > Javascript > Prettier 선택
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Prettier package 경로 설정,  On ‘Reformat Code’ action 체크
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### VSC 설정
 
-### `yarn eject`
+ESLint 설정하기
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+VSC 확장 프로그램 마켓 > ESLint 검색 > Microsoft 인증 마크가 달린 확장 프로그램 설치
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+추가적인 세부 설정은 프로젝트 폴더에서 수행함
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ESLint 저장 시 동작 옵션 설정
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+VSC 코드 설정 페이지 > 상단의 버튼을 클릭하여 settings.json 파일로 이동
 
-## Learn More
+다음 항목을 추가
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
