@@ -49,3 +49,4 @@ VSC 코드 설정 페이지 > 상단의 버튼을 클릭하여 settings.json 파
   },
 ```
 
+#### reference - https://huraypositive.atlassian.net/wiki/spaces/dev/pages/2350022657/F.E
